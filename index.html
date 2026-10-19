@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f0e3">
+  <meta name="description" content="Kenalan dengan Rendang dan Gudeg: dua kuliner legendaris Nusantara, sejarah, filosofi, bahan, rasa, dan perbandingannya.">
+  <title>Rendang vs Gudeg — Dua Raksasa Kuliner Nusantara</title>
+  <style>
+    :root {
+      --paper: #fbf7ef;
+      --paper-deep: #f1e7d5;
+      --ink: #29271f;
+      --muted: #726d60;
+      --red: #a33d27;
+      --red-dark: #742b1d;
+      --green: #315342;
+      --gold: #bd8b3e;
+      --line: #e6dccb;
+      --white: #fffdf8;
+      --shadow: 0 16px 45px rgba(74, 49, 24, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 4px;
+      width: 0;
+      background: var(--red);
+      z-index: 10;
+    }
+
+    .masthead {
+      min-height: 460px;
+      padding: 28px 24px 70px;
+      overflow: hidden;
+      position: relative;
+      color: #fff9eb;
+      background: radial-gradient(ellipse at 78% 25%, rgba(226, 157, 74, .45), transparent 33%), linear-gradient(130deg, #283f34 0%, #42583e 44%, #8a4429 100%);
+    }
+
+    .masthead::before, .masthead::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .masthead::before {
+      width: 570px;
+      height: 570px;
+      right: -110px;
+      top: 40px;
+    }
+
+    .masthead::after {
+      width: 390px;
+      height: 390px;
+      right: -20px;
+      top: 130px;
+    }
+
+    .topline, .hero, .page {
+      width: min(100%, 1050px);
+      margin-inline: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font: 700 11px/1.2 system-ui, sans-serif;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .brand { display: flex; gap: 10px; align-items: center; }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 50%;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .top-note { color: rgba(255,249,235,.73); }
+
+    .hero {
+      padding-top: 84px;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: #f0c88c;
+      font: 700 12px/1.4 system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.04;
+      font-weight: 500;
+      letter-spacing: -.045em;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 24px 0 0;
+      color: rgba(255,249,235,.83);
+      font-size: clamp(16px, 2vw, 19px);
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 28px;
+      color: rgba(255,249,235,.75);
+      font: 12px system-ui, sans-serif;
+    }
+
+    .meta-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #e6b56d;
+    }
+
+    .hero-food {
+      position: absolute;
+      right: 6%;
+      top: 126px;
+      width: 160px;
+      height: 160px;
+      display: grid;
+      place-items: center;
+      font-size: 94px;
+      filter: drop-shadow(0 16px 20px rgba(19,24,14,.3));
+      transform: rotate(-8deg);
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 58px;
+      padding: 58px 24px 90px;
+      align-items: start;
+    }
+
+    aside { position: sticky; top: 28px; }
+
+    .toc-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 19px;
+      box-shadow: var(--shadow);
+    }
+
+    .toc-title {
+      margin: 0 0 13px;
+      font: 700 11px/1.3 system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: var(--muted);
+    }
+
+    .toc-card nav { display: grid; gap: 5px; }
+
+    .toc-card a {
+      color: #5b584e;
+      text-decoration: none;
+      font: 14px/1.4 system-ui, sans-serif;
+      padding: 7px 9px;
+      border-radius: 8px;
+    }
+
+    .toc-card a:hover, .toc-card a:focus {
+      color: var(--red);
+      background: #f8eee5;
+      outline: none;
+    }
+
+    .toc-note {
+      border-top: 1px solid var(--line);
+      margin: 17px 0 0;
+      padding-top: 14px;
+      color: var(--muted);
+      font: 12px/1.6 system-ui, sans-serif;
+    }
+
+    article { min-width: 0; }
+
+    .intro {
+      padding: 0 0 30px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 35px;
+    }
+
+    .intro h2 {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    p { margin: 0 0 18px; }
+    .intro p:last-child { margin-bottom: 0; }
+    strong { color: #332e24; }
+    .article-section { margin: 0 0 48px; }
+
+    .section-kicker {
+      margin: 0 0 6px;
+      color: var(--red);
+      font: 700 11px/1.4 system-ui, sans-serif;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h2.section-title {
+      margin: 0 0 23px;
+      color: var(--green);
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 500;
+      line-height: 1.16;
+      letter-spacing: -.025em;
+    }
+
+    h3 {
+      margin: 27px 0 10px;
+      color: var(--red-dark);
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    .food-photo {
+      margin: 0 0 27px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .food-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--paper-deep);
+    }
+
+    .food-photo figcaption {
+      padding: 10px 14px 12px;
+      color: var(--muted);
+      font: 12px/1.5 system-ui, sans-serif;
+    }
+
+    .food-photo figcaption a {
+      color: var(--red-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    ul, ol { padding-left: 25px; margin: 0 0 20px; }
+    li { padding-left: 3px; margin: 0 0 7px; }
+    li::marker { color: var(--gold); }
+
+    .pullquote {
+      margin: 28px 0;
+      padding: 20px 24px;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      background: #f3ebdc;
+      color: #514737;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    .pullquote p { margin: 0; }
+
+    .taste-card {
+      margin: 23px 0 0;
+      padding: 24px 25px;
+      background: var(--green);
+      color: #f8f1e4;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .taste-card h3 { margin: 0 0 10px; color: #f1c981; }
+    .taste-card p { margin-bottom: 12px; }
+    .taste-card p:last-child { margin: 0; }
+    .taste-card strong { color: #fff1d2; }
+
+    .ingredient-card {
+      margin: 18px 0 24px;
+      padding: 20px 22px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .ingredient-card h3 { margin: 0 0 10px; }
+    .ingredient-card ul { margin-bottom: 0; }
+
+    .steps { counter-reset: step; padding: 0; list-style: none; }
+
+    .steps li {
+      position: relative;
+      min-height: 47px;
+      padding: 2px 0 14px 54px;
+      margin: 0 0 7px;
+    }
+
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--red);
+      font: 700 14px system-ui, sans-serif;
+    }
+
+    .compare-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      background: var(--white);
+      margin: 20px 0 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 530px;
+      font: 14px/1.55 system-ui, sans-serif;
+    }
+
+    th, td {
+      padding: 15px 17px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    thead th {
+      color: white;
+      background: var(--green);
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+
+    thead th:first-child { border-radius: 12px 0 0 0; }
+    thead th:last-child { border-radius: 0 12px 0 0; }
+
+    tbody th {
+      width: 26%;
+      color: #665e4e;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+
+    .closing {
+      padding: 25px;
+      background: #f1e7d5;
+      border-radius: 16px;
+      border: 1px solid #e5d8c2;
+    }
+
+    .closing h2 {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .question { color: var(--red-dark); font-size: 20px; }
+    .sources { margin-top: 25px; color: var(--muted); font: 12px/1.6 system-ui, sans-serif; }
+
+    footer {
+      padding: 26px 24px;
+      text-align: center;
+      color: #7c7466;
+      border-top: 1px solid var(--line);
+      font: 12px system-ui, sans-serif;
+    }
+
+    .print-button {
+      appearance: none;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.45);
+      color: #fff9eb;
+      background: rgba(255,255,255,.08);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font: 600 12px system-ui, sans-serif;
+    }
+
+    .print-button:hover { background: rgba(255,255,255,.17); }
+
+    @media (max-width:760px) {
+      .masthead { min-height: 410px; padding-inline: 20px; }
+      .hero { padding-top: 75px; }
+
+      .hero-food {
+        right: 0;
+        top: 215px;
+        font-size: 64px;
+        width: 100px;
+        height: 100px;
+        opacity: .65;
+      }
+
+      .top-note { display: none; }
+      .page { display: block; padding: 34px 20px 64px; }
+      aside { position: static; margin-bottom: 36px; }
+      .toc-card { padding: 17px; }
+      .toc-card nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .toc-note { display: none; }
+    }
+
+    @media (max-width:440px) {
+      .hero-meta { flex-wrap: wrap; gap: 8px; }
+      .hero { padding-top: 58px; }
+      .masthead { min-height: 390px; }
+      .toc-card nav { grid-template-columns: 1fr; }
+      .pullquote { padding: 17px 18px; font-size: 17px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .progress, .toc-card, .print-button { display: none !important; }
+
+      .masthead {
+        min-height: 0;
+        padding: 35px 20px;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .hero { padding-top: 35px; }
+      .page { display: block; padding: 35px 20px; }
+      .article-section { break-inside: avoid; }
+
+      .taste-card, thead th {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      footer { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="topline">
+      <div class="brand">
+        <span class="brand-mark">🍽</span>
+        <span>Rasa Nusantara</span>
+      </div>
+      <span class="top-note">Cerita di balik setiap suapan</span>
+      <button class="print-button" onclick="window.print()" aria-label="Cetak atau simpan artikel sebagai PDF">Cetak / Simpan PDF</button>
+    </div>
+
+    <div class="hero">
+      <p class="eyebrow">Kuliner • Indonesia</p>
+      <h1>Rendang vs Gudeg: Dua Raksasa Kuliner Nusantara yang Bikin Nagih!</h1>
+      <p class="hero-copy">Bukan soal makanan mahal atau restoran kekinian. Ini cerita dua makanan tradisional Indonesia yang sudah ratusan tahun eksis dan masih dicari sampai sekarang.</p>
+      <div class="hero-meta">
+        <span>Perjalanan rasa dari Sumatera Barat ke Yogyakarta</span>
+        <span class="meta-dot"></span>
+        <span>6 menit baca</span>
+      </div>
+      <div class="hero-food" aria-hidden="true">🍛</div>
+    </div>
+  </header>
+
+  <main class="page">
+    <aside aria-label="Daftar isi">
+      <div class="toc-card">
+        <p class="toc-title">Di artikel ini</p>
+        <nav>
+          <a href="#hai">Hai, ngiler dulu yuk!</a>
+          <a href="#rendang">1. Rendang</a>
+          <a href="#gudeg">2. Gudeg</a>
+          <a href="#perbandingan">Perbandingan</a>
+          <a href="#kesimpulan">Kesimpulan</a>
+        </nav>
+        <p class="toc-note">Dua daerah, dua karakter rasa, satu alasan buat nambah nasi.</p>
+      </div>
+    </aside>
+
+    <article>
+      <section class="intro" id="hai">
+        <h2>Hai, Ngiler Dulu Yuk!</h2>
+        <p>Hai semua! Jujur ya, bikin artikel ini tuh sekaligus penyiksaan buat gw sendiri, soalnya gw harus ngetik soal makanan favorit sambil perut lagi keroncongan 😭</p>
+        <p>Ngomongin kuliner tradisional Indonesia, ada dua nama yang kalo disebut di mana aja pasti langsung bikin orang terbayang rasanya: <strong>Rendang</strong> dan <strong>Gudeg</strong>. Satu dari barat (Sumatera), satu dari tengah (Yogyakarta). Dua-duanya legendaris, dua-duanya punya sejarah panjang, dan dua-duanya... <strong>BISA BANGET BIKIN LO NAMBAH NASI.</strong></p>
+        <p>Nah, di artikel ini gw bakal ajak lo jalan-jalan mengenal dua raja kuliner ini. Siap-siap lapar ya!</p>
+      </section>
+
+      <section class="article-section" id="rendang">
+        <p class="section-kicker">Sumatera Barat · Gurih dan kaya rempah</p>
+        <h2 class="section-title">1. Rendang — Si Hitam Manis yang Bikin Ketagihan</h2>
+
+        <figure class="food-photo">
+          <img src="https://asset.kompas.com/crops/niVZC_ZiMcOw_tYHeTLOKAjQC6o=/0x657:1600x1724/1200x800/data/photo/2021/07/26/60fed016da57b.jpg" alt="Hidangan rendang" loading="eager" decoding="async" fetchpriority="high">
+          <figcaption>Rendang · Foto dari <a href="https://www.kompas.com/food/read/2022/01/06/113400575/sejarah-rendang-berkaitan-dengan-tradisi-merantau-orang-minangkabau" target="_blank" rel="noopener noreferrer">Kompas.com</a></figcaption>
+        </figure>
+
+        <h3>Dari Mana Sih Asalnya?</h3>
+        <p>Jadi gini, rendang itu asli anak kandung <strong>Minangkabau, Sumatera Barat</strong>. Katanya udah ada sejak abad ke-15, gila lama banget ya. Dulu para perantau Minang suka keliling merantau jauh, dan mereka butuh bekal yang <strong>awet nggak gampang basi</strong> tanpa kulkas. Solusinya? Dimasak pake santan lama-lama sampe kering. Santan yang udah dimasak lama itu ternyata bikin makanan jadi lebih tahan lama. Pinter ya orang dulu!</p>
+        <p>Terus gengsi rendang tuh udah kelas dunia bro. Tahun 2011 dan 2017 CNN pernah ngebilang rendang ini <strong>makanan terenak sedunia</strong>! Terus di 2021, UNESCO resmi ngasih gelar <strong>Warisan Budaya Takbenda</strong> buat tradisi masak rendang. Emang udah level dunia, nggak usah diragukan lagi.</p>
+
+        <h3>Filosofinya Dalam Banget, Bukan Cuma Enak Doang</h3>
+        <p>Orang Minang itu pikirannya filosofis banget, masak rendang aja ada maknanya:</p>
+        <ul>
+          <li><strong>Milih bahan-bahannya</strong> = ngajarin kita buat bijak milih jalan hidup</li>
+          <li><strong>Masaknya lama banget</strong> = kesabaran emang kunci</li>
+          <li><strong>Bumbu yang jadi satu sama daging</strong> = kayak pemimpin yang nyatu sama rakyatnya</li>
+          <li><strong>Santan</strong> = lambang kemakmuran dan kebersamaan</li>
+        </ul>
+
+        <p>Rendang juga wajib banget ada di acara adat Minang — pernikahan, sunatan, acara syukuran. Kalo nggak ada rendang, rasanya acaranya kayak kurang lengkap gitu.</p>
+
+        <div class="ingredient-card">
+          <h3>🥩 Bahan Utamanya</h3>
+          <ul>
+            <li>Daging sapi (paha atau sengkel paling enak)</li>
+            <li>Bawang merah, bawang putih, cabai merah, jahe, kunyit</li>
+            <li>Serai, daun jeruk, daun salam, lengkuas, asam kandis</li>
+            <li>Dan yang paling penting: <strong>santan kental yang banyak</strong></li>
+          </ul>
+        </div>
+
+        <h3>Proses Masaknya? Sabar Woy!</h3>
+        <p>Nih yang bikin rendang beda dari masakan lain. Ada <strong>3 tahap</strong> yang harus dilalui:</p>
+        <ol class="steps">
+          <li><strong>Gulai</strong> — masih berkuah encer, warna kuning</li>
+          <li><strong>Kalio</strong> — udah mulai kental, warna coklat kemerahan</li>
+          <li><strong>Rendang</strong> — kering, bumbu nempel semua di daging</li>
+        </ol>
+
+        <p>Total waktunya? <strong>Bisa 4 sampai 8 jam</strong> bro! Kecil apinya, terus diaduk-aduk. Kalo kepeleset sebentar aja, bisa gosong nangis lo 😅</p>
+
+        <div class="taste-card">
+          <h3>Gimana Sih Rasanya?</h3>
+          <p>Okay, sekarang bagian paling gw suka: <strong>deskripsi rasanya</strong>.</p>
+          <p>Rendang itu rasanya kayak <strong>konsentrasi dari semua rasa enak jadi satu</strong>. Pertama gigitan lo kena bumbu yang kaya banget — ada pedas, ada gurih dari santan, ada segernya serai dan daun jeruk. Terus lo kunyah dagingnya... <strong>empuk banget, hampir lumer di mulut</strong>. Bumbunya udah ngeresap sampai ke dalam-dalam, jadi nggak cuma di luar doang.</p>
+          <p>Yang paling bikin nagih tuh <strong>aftertaste-nya</strong> — ada manis-manisnya tipis, pedesnya nendang tapi nggak nyiksa, dan aroma rempahnya masih nempel di langit-langit mulut. Beneran deh, makan rendang pake nasi anget itu... <strong>SURGA DUNIA</strong>.</p>
+        </div>
+      </section>
+
+      <section class="article-section" id="gudeg">
+        <p class="section-kicker">Yogyakarta · Manis, lembut, dan menenangkan</p>
+        <h2 class="section-title">2. Gudeg — Si Manis Legit dari Jogja</h2>
+
+        <figure class="food-photo">
+          <img src="https://awsimages.detik.net.id/community/media/visual/2024/07/16/ilustrasi-nasi-gudeg_169.jpeg?w=700&amp;q=90" alt="Seporsi nasi gudeg" loading="eager" decoding="async">
+          <figcaption>Nasi gudeg · Foto dari <a href="https://www.detik.com/jogja/kuliner/d-7912013/8-tempat-makan-gudeg-di-jogja-yang-enak-dan-legendaris" target="_blank" rel="noopener noreferrer">detik.com</a></figcaption>
+        </figure>
+
+        <h3>Asal Usulnya Unik Banget</h3>
+        <p>Gudeg ini anak khas <strong>Yogyakarta</strong>. Konon udah ada sejak zaman Kerajaan Mataram, sekitar abad ke-16. Ceritanya dulu warga Jogja banyak yang pake nangka muda sebagai pengganti nasi waktu paceklik. Nangka muda kan murah dan gampang didapat.</p>
+        <p>Ada juga yang bilang gudeg terinspirasi dari masakan nangka khas India yang dibawa pedagang India ke Jawa. Tapi orang Jawa ada-ada aja — mereka olah pake santan dan gula aren, hasilnya jadi masakan manis legit yang beda jauh sama versi aslinya.</p>
+
+        <h3>Filosofinya Juga Nggak Kalah Dalam</h3>
+        <p>Orang Jawa emang pikirannya dalam semua ya:</p>
+        <ul>
+          <li><strong>Rasa manis gudeg</strong> = lambang kelembutan dan keramahan orang Jawa</li>
+          <li><strong>Dimasak lama</strong> = kesabaran dalam menjalani hidup</li>
+          <li><strong>Banyak lauk pendampingnya</strong> = kerukunan dan kebersamaan</li>
+        </ul>
+
+        <div class="ingredient-card">
+          <h3>🍈 Bahan Utamanya</h3>
+          <ul>
+            <li>Nangka muda (gori) yang diiris-iris</li>
+            <li>Santan, gula merah (aren), daun salam, lengkuas</li>
+            <li>Krecek, tahu, tempe bacem</li>
+            <li>Telur pindang, ayam kampung opor</li>
+          </ul>
+        </div>
+
+        <h3>Cara Masaknya Unik!</h3>
+        <p>Gudeg dimasak pake teknik <strong>"unggup"</strong> — pancinya ditutup pake <strong>daun pisang terus ditaro piring di atasnya</strong>. Bukan tutup panci biasa lho! Fungsinya biar nangkanya matang merata dan ada aroma daun pisangnya. Sekitar 3-6 jam dimasaknya.</p>
+
+        <div class="taste-card">
+          <h3>Gimana Rasanya?</h3>
+          <p>Okay, ini deskripsi rasa gudeg versi gw:</p>
+          <p>Bayangin lo nyendok nangka yang udah dimasak berjam-jam pake santan dan gula aren. Pertama yang lo rasain adalah <strong>manis yang lembut banget</strong> — bukan manis nyegrak, tapi manis legit yang nyaman. Terus ada <strong>gurih dari santan</strong> yang nyatu sama manisnya.</p>
+          <p>Teksturnya tuh <strong>lembut, empuk, agak berserat</strong> — nangka muda kan teksturnya kayak daging. Kalo lo makannya sama <strong>krecek</strong> yang pedes-manis, <strong>telur pindang</strong> yang gurih, dan <strong>sambal krecek</strong>... aduh, nggak kebayang enaknya.</p>
+          <p>Gudeg tuh kayak <strong>pelukan dalam bentuk makanan</strong> — hangat, manis, nenangin. Beneran deh, makan gudeg di pagi-pagi waktu cuaca dingin itu rasanya kayak di-thank you-in sama semesta 😂</p>
+        </div>
+
+        <h3>Dua Varian Legendaris</h3>
+        <ol>
+          <li><strong>Gudeg Kering (Klaten)</strong> — bumbu meresap habis, manis pekat, awet lama</li>
+          <li><strong>Gudeg Basah (Yogyakarta)</strong> — banyak kuah santannya, lebih gurih dan segar</li>
+        </ol>
+      </section>
+
+      <section class="article-section" id="perbandingan">
+        <p class="section-kicker">Dua karakter, sama-sama juara</p>
+        <h2 class="section-title">Perbandingan Rendang vs Gudeg</h2>
+
+        <div class="compare-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Aspek</th>
+                <th>Rendang</th>
+                <th>Gudeg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th>Asal</th><td>Sumatera Barat</td><td>Yogyakarta</td></tr>
+              <tr><th>Bahan pokok</th><td>Daging sapi</td><td>Nangka muda</td></tr>
+              <tr><th>Profil rasa</th><td>Gurih, pedas, rempah kuat</td><td>Manis, gurih, legit</td></tr>
+              <tr><th>Waktu masak</th><td>4–8 jam</td><td>3–6 jam</td></tr>
+              <tr><th>Status dunia</th><td>WBTB UNESCO &amp; makanan terenak CNN</td><td>Ikon wisata kuliner Jogja</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="closing" id="kesimpulan">
+        <h2>Kesimpulan</h2>
+        <p>Dua makanan ini membuktikan bahwa kuliner tradisional Indonesia tuh emang nggak main-main. Keduanya lahir dari kearifan lokal, dimasak dengan kesabaran, dan penuh filosofi.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>Rasa Nusantara · Cerita kuliner yang bikin tambah nasi.</footer>
+
+  <script>
+    const bar = document.getElementById('progress');
+
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  </script>
+</body>
+</html>
